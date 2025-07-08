@@ -1,0 +1,139 @@
+/* src/app/components/Form/form.module.css */
+
+.form {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: -4rem auto 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  color: #7b1fa2;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.field input,
+.field textarea,
+.field select {   /* <— agora o select também está escopado */
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.inputWithButton{
+  display:inline-flex;       /* mantém itens lado-a-lado em qualquer tela */
+  width:100%;
+}
+
+.inputWithButton input{
+  flex:1;
+  padding:.75rem;
+  border:1px solid #ccc;
+  border-right:none;          /* cola com o botão */
+  border-radius:4px 0 0 4px;
+  font-size:1rem;
+}
+
+.downloadBtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:48px;             /* área segura para toques */
+  padding:0 .75rem;
+  background:#616161;
+  color:#fff;
+  border:1px solid #ccc;
+  border-left:none;
+  border-radius:0 4px 4px 0;
+  cursor:pointer;
+}
+
+.downloadBtn:hover{
+  background:#4e4e4e;
+}
+
+
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+
+.submitBtn {
+  background-color: #9c27b0;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+ margin: 0 auto;
+}
+
+
+
+/* Responsividade para mobile */
+@media (max-width: 640px) {
+  .form {
+    padding: 1rem;
+    margin: -2rem auto 1rem;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr; /* uma coluna só */
+  }
+
+  .inputWithButton{
+  display:inline-flex;       /* mantém itens lado-a-lado em qualquer tela */
+  width:100%;
+}
+
+.inputWithButton input{
+  flex:1;
+  padding:.75rem;
+  border:1px solid #ccc;
+  border-right:none;          /* cola com o botão */
+  border-radius:4px 0 0 4px;
+  font-size:1rem;
+}
+
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .submitBtn {
+    width: 100%;                /* botão cheio */
+    justify-content: center;
+  }
+}
+
+@media(max-width:640px){
+  .grid2{ grid-template-columns:1fr; }      /* mantém uma coluna */
+  /* REMOVIDO: flex-direction:column; */
+}
