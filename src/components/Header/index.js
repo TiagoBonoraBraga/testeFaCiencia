@@ -1,5 +1,5 @@
 "use client"
-import styles from './Header.module.css';
+import styles from './header.module.css';
 import Image from 'next/image';
 import { FaUserPlus } from 'react-icons/fa'
 

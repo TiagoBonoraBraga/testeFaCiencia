@@ -2,7 +2,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import styles from './form.module.css'
 import { FaDownload, FaPaperPlane  } from 'react-icons/fa'
 
